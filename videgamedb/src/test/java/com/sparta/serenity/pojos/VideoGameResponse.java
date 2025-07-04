@@ -22,6 +22,7 @@ public class VideoGameResponse{
 	@JsonProperty("category")
 	private String category;
 
+
 	public void setReviewScore(int reviewScore){
 		this.reviewScore = reviewScore;
 	}
