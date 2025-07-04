@@ -35,7 +35,7 @@ public class CreateVideoGameSteps {
                 .baseUri(createEnvironmentVariables().getProperty("videogamedb.api.url"))
                 .basePath(createEnvironmentVariables().getProperty("videogamedb.api.basepath"))
                 .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc1MTYzNzQ0OCwiZXhwIjoxNzUxNjQxMDQ4fQ.irqEj7pJ7uHxrRMVDxAJN8xhoX5Br6SuvK-RTRa0sM8");
+                .header("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc1MTY0MDU2OSwiZXhwIjoxNzUxNjQ0MTY5fQ.QrODoD-2tksP7s8zDPA37JKYbqVEBxZrh4_FV_Y0Kfo");
     }
 
     @And("I have a valid video game request body")
@@ -58,8 +58,5 @@ public class CreateVideoGameSteps {
 
     }
 
-    @Then("I should get a {int} response code")
-    public void iShouldGetAResponseCode(int code) {
-        then().statusCode(code);
-    }
+
 }

@@ -23,10 +23,7 @@ public class GetSingleVideoGameSteps {
         when().get(createEnvironmentVariables().getProperty("videogamedb.api.basepath")+ ID);
     }
 
-    @Then("I should get a {int} response code")
-    public void iShouldGetAResponseCode(int expected) {
-        then().statusCode(expected);
-    }
+
 
     @And("the returned name should be {string}")
     public void theReturnedNameShouldBe(String expected) {

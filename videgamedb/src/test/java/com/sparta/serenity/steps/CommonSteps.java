@@ -10,4 +10,8 @@ import static net.thucydides.core.environment.SystemEnvironmentVariables.createE
 import static org.hamcrest.Matchers.equalTo;
 
 public class CommonSteps {
+    @Then("I should get a {int} response code")
+    public void iShouldGetAResponseCode(int expected) {
+        then().statusCode(expected);
+    }
 }

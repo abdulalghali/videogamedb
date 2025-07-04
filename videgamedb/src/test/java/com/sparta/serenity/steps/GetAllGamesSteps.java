@@ -1,6 +1,5 @@
 package com.sparta.serenity.steps;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,7 +8,6 @@ import static net.serenitybdd.rest.RestRequests.given;
 import static net.serenitybdd.rest.RestRequests.when;
 import static net.serenitybdd.rest.SerenityRest.then;
 import static net.thucydides.core.environment.SystemEnvironmentVariables.createEnvironmentVariables;
-import static net.thucydides.core.environment.SystemEnvironmentVariables.*;
 
 public class GetAllGamesSteps {
     @Given("I am using the video game API")
@@ -22,9 +20,6 @@ public class GetAllGamesSteps {
         when().get(createEnvironmentVariables().getProperty("videogamedb.api.basepath"));
     }
 
-    @Then("I should get a {int} response code")
-    public void iShouldGetAResponseCode(int code) {
-        then().statusCode(code);
-    }
+
 
 }
